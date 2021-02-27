@@ -1,4 +1,20 @@
 const tmi = require('tmi.js');
+const express = require( 'express' );
+const app = express();
+const cors = require('cors')
+const router = require('./routers/router');
+
+const corsOptions = {
+	origin: 'https://ame-chat-bot.vercel.app/',
+	optionsSuccessStatus: 200
+}
+
+app.use(cors(corsOptions));
+app.use( '/api/requests', router );
+
+app.use(router)
+
+module.exports = app;
 
 // Define configuration options
 const configs = {
