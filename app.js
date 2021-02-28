@@ -1,7 +1,7 @@
 const tmi = require('tmi.js');
 const express = require( 'express' );
-const app = express();
 const cors = require('cors')
+const app = express();
 const router = require('./routers/router');
 
 const corsOptions = {
