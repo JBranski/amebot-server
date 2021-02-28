@@ -12,8 +12,6 @@ const router = require('./routers/router');
 app.use(cors());
 app.use( '/api/', router );
 
-app.use(router)
-
 module.exports = app;
 
 // Define configuration options

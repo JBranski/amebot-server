@@ -5,11 +5,12 @@ const services = require( './../services/services' );
 
 router
 	.post('/requests', jsonParser, ( req, res, next ) => {
-		const newRequest= {
-			name = req.body.name,
-			command = req.body.command,
-			comResponse = req.body.comResponse
+		const newRequest = {
+			name : req.body.name,
+			command : req.body.command,
+			comResponse : req.body.comResponse
 		}
+		
 		services
 			.addRequest( req.app.get( 'db' ), newRequest )
 			.then( result => {
