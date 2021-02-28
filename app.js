@@ -4,12 +4,12 @@ const cors = require('cors')
 const app = express();
 const router = require('./routers/router');
 
-const corsOptions = {
-	origin: 'https://ame-chat-bot.vercel.app',
-	optionsSuccessStatus: 200
-}
+// const corsOptions = {
+// 	origin: 'https://ame-chat-bot.vercel.app',
+// 	optionsSuccessStatus: 200
+// }
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use( '/api/', router );
 
 app.use(router)
