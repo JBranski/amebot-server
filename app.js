@@ -5,7 +5,7 @@ const cors = require('cors')
 const router = require('./routers/router');
 
 const corsOptions = {
-	origin: 'https://ame-chat-bot.vercel.app/',
+	origin: 'https://ame-chat-bot.vercel.app',
 	optionsSuccessStatus: 200
 }
 
