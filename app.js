@@ -10,7 +10,7 @@ const corsOptions = {
 }
 
 app.use(cors(corsOptions));
-app.use( '/api/requests', router );
+app.use( '/api/', router );
 
 app.use(router)
 
