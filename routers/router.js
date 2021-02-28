@@ -8,9 +8,9 @@ router
 		const newRequest = {
 			name : req.body.name,
 			command : req.body.command,
-			comResponse : req.body.comResponse
+			comresponse : req.body.comresponse
 		}
-		
+
 		services
 			.addRequest( req.app.get( 'db' ), newRequest )
 			.then( result => {
